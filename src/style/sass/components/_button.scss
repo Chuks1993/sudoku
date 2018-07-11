@@ -1,0 +1,72 @@
+
+.btn {
+    &, //so it applies to all the buttons
+    &:link, //applies to link <a> buttons
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: absolute;
+        font-size: var(--font-medium);
+
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem var(--color-primary);
+
+        &::after {
+        transform: scaleX(1.4) scaleY(1.5);
+        opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus { //makes focus have the features of active aswell
+        outline: none; 
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 2rem var(--color-primary);
+    }
+
+    &--white {
+        background-color: var(--color-white);
+        color: var(--color-grey-dark-1);
+
+        &::after {
+        background-color: var(--color-white);
+        }
+    }
+
+    &--green {
+        background-color: var(--color-grey-dark-1);
+        color:var(--color-primary);
+
+        &::after {
+        background-color: var(--color-grey-dark-1);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .2s;
+    }
+
+    &--animated {
+        animation: btnGrow .2s ease-out .3s;
+        animation-fill-mode: backwards;
+    }
+}

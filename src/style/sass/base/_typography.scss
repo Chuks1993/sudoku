@@ -1,0 +1,24 @@
+
+body {
+    font-family: "lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    padding: 3rem;
+}
+
+.heading-secondary {
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30rem;
+    display: inline-block;
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2rem;
+    text-shadow: var(--shadow-dark);
+    display: flex;
+    flex-direction: column;
+
+}
