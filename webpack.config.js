@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     // Tell webpack to begin building its 
     // dependency graph from this file.
-    entry: path.join(__dirname, 'index.js'),
+    entry: path.join(__dirname, 'src', 'index.js'),
     // And to place the output in the `build` directory
     output: {
         path: path.join(__dirname, 'build'),
@@ -44,7 +44,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.html')
+            template: path.join(__dirname,'public', 'index.html')
         })
     ]
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './src/App';
-import registerServiceWorker from './src/registerServiceWorker';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-import './src/style/sass/main.scss';
+import './style/sass/main.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
 if (module.hot) {
-    module.hot.accept('./src/App', function(){
-        var NextApp = require('./src/App')
+    module.hot.accept('./App', function(){
+        var NextApp = require('./App')
         ReactDOM.render(<NextApp />, document.getElementById('root'))
         registerServiceWorker();
     });

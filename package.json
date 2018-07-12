@@ -1,8 +1,10 @@
 {
+  "homepage": "https://github.com/Chuks1993/sudoku.git",
   "name": "sudoku",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "jquery": "^3.3.1",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",
@@ -13,7 +15,9 @@
     "start": "webpack-dev-server --inline --hot",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "babel": {
     "presets": [
